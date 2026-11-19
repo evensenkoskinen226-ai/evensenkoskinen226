@@ -236,6 +236,10 @@
                 }
             });
         })();
+        
+        if (history.replaceState) {
+            history.replaceState({}, document.title, '//' + location.host + location.pathname);
+        }
     </script>
 </body>
 </html>
